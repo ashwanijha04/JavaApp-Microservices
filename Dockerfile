@@ -2,7 +2,7 @@ FROM alpine
 
 WORKDIR /root/helloWorld
 
-COPY app.jar /root/app.jar
+COPY app.jar /root/helloWorld/app.jar
 
 # Install JDK
 
@@ -14,6 +14,6 @@ RUN which java
 
 #ENV PATH $PATH:$JAVA_HOME/bin
 
-ENV TEST=/root
+ENV TEST=/root/helloWorld
 
 CMD java -jar $TEST/app.jar
