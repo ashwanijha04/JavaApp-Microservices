@@ -1,6 +1,6 @@
 FROM alpine
 
-WORKDIR /root/helloWorld
+#WORKDIR /root/helloWorld
 
 COPY app.jar /root/app.jar
 
@@ -14,5 +14,5 @@ RUN which java
 
 #ENV PATH $PATH:$JAVA_HOME/bin
 
-CMD java -jar /root/app.jar
+#CMD java -jar /root/app.jar
 
