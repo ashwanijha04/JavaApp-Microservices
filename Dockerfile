@@ -14,6 +14,6 @@ RUN which java
 
 #ENV PATH $PATH:$JAVA_HOME/bin
 
-#ENV TEST=/root
+ENV TEST=/root
 
-#CMD java -jar $TEST/app.jar
+CMD java -jar $TEST/app.jar
