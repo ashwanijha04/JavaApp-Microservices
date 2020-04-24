@@ -1,6 +1,6 @@
 FROM alpine
 
-#WORKDIR /root/helloWorld
+WORKDIR /root/helloWorld
 
 COPY app.jar /root/app.jar
 
@@ -10,9 +10,10 @@ RUN apk add openjdk8
 
 RUN which java
 
-#ENV JAVA_HOME /usr/
+ENV JAVA_HOME /usr/bin
 
-#ENV PATH $PATH:$JAVA_HOME/bin
+ENV PATH $PATH:$JAVA_HOME/bin
 
-#CMD java -jar /root/app.jar
+ENV TEST=/root
 
+CMD java -jar $TEST/app.jar
