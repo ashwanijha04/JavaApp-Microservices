@@ -8,9 +8,11 @@ COPY app.jar /root/app.jar
 
 RUN apk add openjdk8
 
-ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
+RUN which java
 
-ENV PATH $PATH:$JAVA_HOME/bin
+#ENV JAVA_HOME /usr/
 
-RUN java -jar app.jar
+#ENV PATH $PATH:$JAVA_HOME/bin
+
+CMD java -jar /root/app.jar
 
